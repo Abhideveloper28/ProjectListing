@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Number</th>
       <th>Name</th>
       <th>Client name</th>
       <th>Description</th>
@@ -14,8 +15,9 @@
   </thead>
 
   <tbody>
-    <% @projects.each do |project| %>
+    <% @projects.each_with_index do |project, i| %>
       <tr>
+        <td><%= "##{i}" %></td>
         <td><%= project.name %></td>
         <td><%= project.client_name %></td>
         <td><%= project.description %></td>
